@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>Week 5 Lab</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width">
+        <!-- link to css page -->
+        <link rel="stylesheet" type="text/css" href="lab5.css" />
+
+    </head>
+    
+    <body>
+        <!-- this is the form that is displayed -->
+    <form name="mainform" id="mainform" action="">
+        <div id="content">
+            
+            <!--The <fieldset> tag is used to group related elements in a form.
+The <fieldset> tag draws a box around the related elements. -->
+        <fieldset>
+                <legend>Personal information:</legend>
+                
+                <!-- the is the name label-->
+                <label for="Fname">First Name:</label>
+                <input id="Fname" name="Fname" type="text" size="30" placeholder="First Name" />
+                <span class="valid" id="fnDtU2"></span>
+                <span class="error" id="fnDtU1"></span> <br /><br />
+                
+                <label for="Lname">Last Name:</label>
+                <input id="Lname" name="Lname" type="text" size="30" placeholder="Last Name" />
+                <span class="valid" id="lnDtU2"></span>
+                <span class="error" id="lnDtU1"></span> <br /><br />
+                
+                <!--label for email-->
+                <label for="email">E-mail:</label>
+                <input id="email" name="email" type="text" size="30" placeholder="sample@email.com" />
+                <span class="valid" id="eDtU2"></span>
+                <span class="error" id="eDtU1"></span> <br /><br />
+                
+                <!-- label for comment field -->
+                <label for="comments">Comments:</label>
+                <textarea id="comments" name="comments" placeholder="You can submit up to 150 characters"></textarea>
+                <input type="button" value="submit" onclick="submitForm();" />
+               
+                
+
+                
+                
+                <!-- submit button on form -->
+                <!-- onclick="submitForm() is function called into JScode -->
+                <!-- <input type="button" value="submit" onclick="submitForm();" /> -->
+            </fieldset>
+            
+         </div>
+    </form>
+        
+        <script type="text/javascript" src="lab5.js"></script>
+    </body>
+</html>

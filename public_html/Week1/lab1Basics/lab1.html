@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor. Created by David Landi 2014.
+-->
+<html>
+    <head>
+        <title>Lab1</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width">
+        <!-- css within html page -->
+        <style type="text/css">
+            #main_container
+            {
+                width:500px;
+                min-height:500px; 
+                margin: auto;
+                font-size:15px; 
+                
+                background-color:  slategray;
+                font-family:sans-serif;
+                border:1px solid black;
+            }
+            #input_fields
+            {
+                width:450px;
+                height:450px;
+                margin-top: 25px;
+                margin-left: 25px;
+                margin-bottom: 25px;
+                background-color: whitesmoke;
+                border:1px solid black;
+            }
+            #content
+            {
+                width:200px;
+                height:350px;
+                margin-top:50px;
+                margin-left:10px; 
+                
+            }
+        </style>
+    </head>
+    <!-- html portion -->
+    <body> 
+    <form name="mainform" id="mainform" action="">
+    <div id ="main_container">
+        <div id = "input_fields"> 
+            <div id ="content">
+                
+                <fieldset>
+                <label for="fname">First Name:</label>
+                <input name="fname" id="fname" value=""/>
+                <br/>
+                <label for="lname">Last Name:</label>
+                <input name="lname" id="lname" value=""/>
+                <br/>
+                <label for="email">E-Mail:</label>
+                <input name="email" id="email" value="" placeholder="sample@email.com" />
+                
+           
+            <p>Who is going to win the SuperBowl?</p>
+            
+           <p> SeaHawks </p>
+            <input type="radio" name="seahawks" id="seahawks" value="yes"  />
+            
+            <p>Broncos</p>
+            <input type="radio" name="broncos" id="broncos" value="yes"  />
+            <p></p>
+            <input type="button" value="Submit" onclick="submitForm()" />
+            
+            </fieldset>
+             </div>
+        </div>
+ 
+    </div>
+        </form> <!-- end of HTML -->
+        
+        <script type="text/javascript"> // start of javaScript
+            function submitForm() // function for click event. 
+            {
+               
+               var firstname = document.getElementById("fname");
+               var lastname = document.getElementById("lname");
+               var email = document.getElementById("email");
+               var i=10;
+               var labnum = 5;               
+               
+               while (i--) // counting down from 10 
+               {
+                   console.log(i);
+               }
+               
+               for (i=0; i<=10; i++) // counting to 10 
+               {
+                   console.log(i);
+               }
+               
+               if (labnum === 5)// checking var value if true console log message 
+               {
+                   console.log('This is Lab 1');
+               }
+              
+               if ( firstname.value.length > 0 ) // making sure name field has value 
+               {
+                   console.log("name valid");
+               }
+               else
+               {
+                   console.log("name invalid");
+                   alert("Invalid Entry");
+               } 
+               
+               if ( lastname.value.length > 0 ) // making sure lnam has value 
+               {
+                   console.log("name valid");
+               }
+               else
+               {
+                   console.log("name invalid");
+                   alert("Invalid Entry");
+               } 
+               
+               if ( email.value.length > 0 && email.value.indexOf("@") > 0 ) // validation for email 
+               {
+                   console.log("email is valid");
+               }
+               else 
+               {
+                   console.log("email is NOT valid");
+               }   
+               
+               if  (document.getElementById('seahawks').checked && document.getElementById('broncos').checked) // validation to ensure only one box is checked
+                    
+               {
+                   console.log("Invalid Entry");
+                   alert("Only One Can Win");
+                   
+               }
+               
+              else if (document.getElementById('seahawks').checked === false && document.getElementById('broncos').checked === false)
+              {
+                console.log("You Must Pick A Team");  
+              }
+              
+             
+             
+             else if (document.getElementById('broncos').checked && document.getElementById('seahawks').checked === false)
+             {
+                 alert("good choice");
+             }
+      
+            }
+        
+        </script>
+    
+   
+       
+    </body>
+</html>

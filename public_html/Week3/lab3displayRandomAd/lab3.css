@@ -1,0 +1,36 @@
+/* 
+    Created on : Feb 1, 2014, 8:00:09 PM
+    Author     : David Landi
+*/
+
+@keyframes slidein {
+    from {
+          font-size:1em;
+          opacity: .1;
+
+    }
+
+    to {
+          font-size:2em;
+          opacity: 1;
+
+    }
+  }
+
+  #ad {
+
+    border-radius: 10px;
+    box-shadow: 2px 2px 2px 2px #000;
+    background: linear-gradient(to bottom, #feffff 0%,#ddf1f9 35%,#a0d8ef 100%);
+
+    animation-duration: 3s;
+    animation-name: slidein;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+
+    border: 1px solid black;
+    font-size: 1em;
+    width: 800px;
+    height: 300px;
+
+  }

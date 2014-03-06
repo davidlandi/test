@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor. Created by David Landi 2014
+-->
+<html>
+    <head>
+        <title>Week 2 Lab</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width">
+        <!-- link to css page -->
+        <link rel="stylesheet" type="text/css" href="lab2.css" />
+
+    </head>
+    
+    <body>
+        <!-- this is the form that is displayed -->
+    <form name="mainform" id="mainform" action="">
+        <div id="content">
+            
+            <!--The <fieldset> tag is used to group related elements in a form.
+The <fieldset> tag draws a box around the related elements. -->
+        <fieldset>
+                <legend>Personal information:</legend>
+                
+                <!-- the is the name label-->
+                <label for="name">Name:</label>
+                <input id="name" name="name" type="text" size="30" placeholder="Full name" />
+                <span class="valid" id="err_name"></span>
+                <span class="error" id="err_name"></span> <br /><br />
+                
+                <!--label for email-->
+                <label for="email">E-mail:</label>
+                <input id="email" name="email" type="text" size="30" placeholder="sample@email.com" />
+                <span class="valid" id="err_email"></span>
+                <span class="error" id="err_email"></span> <br /><br />
+                
+                <!-- label for comment field -->
+                <label for="comments">Comments:</label>
+                <textarea id="comments" name="comments" placeholder="You can submit up to 150 characters"></textarea>
+                <span class="valid" id="userInput"></span>
+                <span class="error" id="userInput"></span> <br /><br />
+                <input type="button" value="submit" onclick="submitForm();" />
+            
+                <!-- submit button on form -->
+                <!-- onclick="submitForm() is function called into JScode -->
+                <!-- <input type="button" value="submit" onclick="submitForm();" /> -->
+            </fieldset>
+         </div>
+    </form>
+        
+        <script type="text/javascript" src="lab2.js"></script>
+    </body>
+</html>
