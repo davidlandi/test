@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width">
+        <style type="text/css">
+            html,body{
+                font-size:120%
+            }
+            label{
+                font-weight:bold;
+                font-size:130%
+            }
+            input{
+                font-size:100%
+            }
+            div{
+                font-size: 150%
+            }
+            canvas{
+                border:1px solid red;
+            }
+            </style>
+    </head>
+    <body>
+        <div id ="fade">Do Stuff</div>
+        <canvas id="shapes" width="900" height="500"></canvas>
+        
+        <script type="text/javascript">
+            var timeOut = document.getElementById('timeOut');
+            var fade = document.getElementById('fade');
+            var fadder = 1000;
+            var time =0;
+            fade.style.opacity = time;
+            var timer = setInterval(fadeIn,100);
+            var can = document.getElementById('shapes');
+            var ctx = can.getContext('2d');
+            
+            requestAnimationFrame(fadeIn);
+                function fadeIn(){
+                    if(time < 10){
+                        fade.style.opacity = (time*.1);
+                        time += 1;
+                       
+                        
+                    }
+                    else{                    
+                        clearInterval(time);
+                    }
+                }
+                function hide(){
+                document.getElementById("fade").style.visibility="hidden";
+            }
+            setTimeout(hide,10000);
+            
+            ctx.fillStyle = "blue";
+            ctx.fillRect(50,300,350,100);
+            
+            ctx.fillStyle = "yellow";
+            ctx.beginPath();
+            ctx.arc(250, 150, 50, 0, Math.PI * 2, false);
+            ctx.fill();
+            
+            function DisplayImage(){
+                var can = document.getElementById('shapes');
+                var ctx = can.getContext('2d');
+                var img = new Image();
+                img.src = "redsox.jpg";
+                
+                img.addEventListener("load", function(){ctx.drawImage(img,525,100);}, false);
+            }
+            window.addEventListener("load", DisplayImage, false);
+            
+            
+             
+            </script>
+        
+        
+    </body>
+</html>
